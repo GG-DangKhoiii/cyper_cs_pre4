@@ -1,0 +1,242 @@
+[
+    {
+        "product_id": 10393,
+        "product": "iPhone 13 128GB Chính Hãng (VN/A)",
+        "slug": "iphone-13-128gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-13-128gb-cty-8b286e",
+        "thumbnail": "https://didongviet.vn/files/media/catalog/product/i/p/iphone-13-128gb-didongviet_1.jpg",
+        "position": 10,
+        "page_title": "iPhone 13 128GB chính hãng | Giảm hơn 4 triệu, Trả góp 0%",
+        "price": "11990000"
+    },
+    {
+        "product_id": 10394,
+        "product": "iPhone 13 256GB Chính Hãng (VN/A)",
+        "slug": "iphone-13-256gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-13-256gb-cty-dc15f1",
+        "thumbnail": "https://didongviet.vn/files/media/catalog/product/i/p/iphone-13-256gb-didongviet_1.jpg",
+        "position": 99999,
+        "page_title": "iPhone 13 256GB chính hãng | Giảm hơn 5 triệu, Trả Góp 0%",
+        "price": "16990000"
+    },
+    {
+        "product_id": 13187,
+        "product": "iPhone 14 128GB Chính hãng (VN/A)",
+        "slug": "iphone-14-128gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-14-128gb-cty-55d7ce",
+        "thumbnail": "https://didongviet.vn/files/media/catalog/product/i/p/iphone-14-128gb-didongviet_1.jpg",
+        "position": 14,
+        "page_title": "iPhone 14 128GB VN/A | Ưu đãi giá rẻ cực sốc, Trả Góp 0%",
+        "price": "12990000"
+    },
+    {
+        "product_id": 13188,
+        "product": "iPhone 14 Plus 128GB Chính hãng (VN/A)",
+        "slug": "iphone-14-plus-128gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-14-plus-128gb-cty-45582a",
+        "thumbnail": "https://didongviet.vn/files/media/catalog/product/i/p/iphone-14-plus-128gb-didongviet.jpg",
+        "position": 99999,
+        "page_title": "iPhone 14 Plus 128GB (VN/A) | Giá rẻ ưu đãi sốc, Trả Góp 0%",
+        "price": "17990000"
+    },
+    {
+        "product_id": 30609,
+        "product": "iPhone 15 128GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-15-128gb-cty-cac328",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-128gb-cty-cac328",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695953279709_thumb_iphone_15_didongviet.jpg",
+        "position": 11,
+        "page_title": "iPhone 15 128GB chính hãng (VN/A) | Giá rẻ sốc, Trả góp 0%",
+        "price": "15990000"
+    },
+    {
+        "product_id": 30610,
+        "product": "iPhone 15 256GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-15-256gb-cty-00bfbf",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-256gb-cty-00bfbf",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695953303071_thumb_iphone_15_didongviet.jpg",
+        "position": 9999,
+        "page_title": "iPhone 15 256GB chính hãng (VN/A) | Giá rẻ sốc, Trả góp 0%",
+        "price": "18990000"
+    },
+    {
+        "product_id": 30612,
+        "product": "iPhone 15 Plus 128GB Chính hãng (VN/A)",
+        "slug": "iphone-15-plus",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-plus-128gb-cty-4b8fcb",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695953356175_thumb_iphone_15_didongviet.jpg",
+        "position": 13,
+        "page_title": "iPhone 15 Plus 128GB VN/A | Trả góp 0% trước 0Đ, Phụ phí 0Đ",
+        "price": "19590000"
+    },
+    {
+        "product_id": 30613,
+        "product": "iPhone 15 Plus 256GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-15-plus-256gb-cty-ec2e62",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-plus-256gb-cty-ec2e62",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695953376833_thumb_iphone_15_didongviet.jpg",
+        "position": 9999,
+        "page_title": "iPhone 15 Plus 256GB VN/A | Trả góp 0% trước 0Đ, Phụ phí 0Đ",
+        "price": "21990000"
+    },
+    {
+        "product_id": 30617,
+        "product": "iPhone 15 Pro 512GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-15-pro-512gb-cty-3c4d30",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-pro-512gb-cty-3c4d30",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695953855830_thumb_iphone_15_pro_didongviet.jpg",
+        "position": 99999,
+        "page_title": "iPhone 15 Pro 512GB VN/A | Trả góp 0% trước 0Đ, Phụ phí 0Đ",
+        "price": "32890000"
+    },
+    {
+        "product_id": 30621,
+        "product": "iPhone 15 Pro Max 512GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-15-pro-max-512gb-cty-f2ca56",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-15-pro-max-512gb-cty-f2ca56",
+        "thumbnail": "https://didongviet.vn/files/products/2023/8/29/1/1695955479856_thumb_iphone_15_pro_didongviet.jpg",
+        "position": 9,
+        "page_title": "iPhone 15 Pro Max 512GB (VN/A) | Trả góp 0%, Phụ phí 0 đồng",
+        "price": "31990000"
+    },
+    {
+        "product_id": 38201,
+        "product": "iPhone 16 128GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-128gb-cty-06adc2",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-128gb-cty-06adc2",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727854642416_thumb_iphone_16_didongviet.jpg",
+        "position": 4,
+        "page_title": "iPhone 16 128GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "18990000"
+    },
+    {
+        "product_id": 38202,
+        "product": "iPhone 16 256GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-256gb-cty-2491da",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-256gb-cty-2491da",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727854664186_thumb_iphone_16_didongviet.jpg",
+        "position": 5,
+        "page_title": "iPhone 16 256GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "21990000"
+    },
+    {
+        "product_id": 38203,
+        "product": "iPhone 16 512GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-512gb-cty-11bbae",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-512gb-cty-11bbae",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727854689521_thumb_iphone_16_didongviet.jpg",
+        "position": 99999,
+        "page_title": "iPhone 16 512GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "27290000"
+    },
+    {
+        "product_id": 38204,
+        "product": "iPhone 16 Plus 128GB Chính hãng (VN/A)",
+        "slug": "iphone-16-plus",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-plus-128gb-cty-192480",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855077401_thumb_iphone_16_plus_didongviet.jpg",
+        "position": 6,
+        "page_title": "iPhone 16 Plus 128GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "22590000"
+    },
+    {
+        "product_id": 38205,
+        "product": "iPhone 16 Plus 256GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-16-plus-256gb-cty-5fd52c",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-plus-256gb-cty-5fd52c",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855113263_thumb_iphone_16_plus_didongviet.jpg",
+        "position": 7,
+        "page_title": "iPhone 16 Plus 256GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "25390000"
+    },
+    {
+        "product_id": 38206,
+        "product": "iPhone 16 Plus 512GB Chính hãng (VN/A)",
+        "slug": "apple-iphone-16-plus-512gb-cty-5fe2a8",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-plus-512gb-cty-5fe2a8",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855164084_thumb_iphone_16_plus_didongviet.jpg",
+        "position": 99999,
+        "page_title": "iPhone 16 Plus 512GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "30390000"
+    },
+    {
+        "product_id": 38207,
+        "product": "iPhone 16 Pro 128GB Chính Hãng (VN/A)",
+        "slug": "iphone-16-pro",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-pro-128gb-cty-b8a2b0",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855633148_thumb_iphone_16_pro_trang_didongviet.jpg",
+        "position": 2,
+        "page_title": "iPhone 16 Pro 128GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "24990000"
+    },
+    {
+        "product_id": 38208,
+        "product": "iPhone 16 Pro 256GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-pro-256gb-cty-a091bc",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-pro-256gb-cty-a091bc",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855652244_thumb_iphone_16_pro_trang_didongviet.jpg",
+        "position": 3,
+        "page_title": "iPhone 16 Pro 256GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "28890000"
+    },
+    {
+        "product_id": 38209,
+        "product": "iPhone 16 Pro 512GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-pro-512gb-cty-868163",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-pro-512gb-cty-868163",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855672713_thumb_iphone_16_pro_trang_didongviet.jpg",
+        "position": 99999,
+        "page_title": "iPhone 16 Pro 512GB chính hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "34990000"
+    },
+    {
+        "product_id": 38213,
+        "product": "iPhone 16 Pro Max 512GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16-pro-max-512gb-cty-c7e692",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-pro-max-512gb-cty-c7e692",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855505378_thumb_iphone_16_pro_didongviet.jpg",
+        "position": 1,
+        "page_title": "iPhone 16 Pro Max 512GB chính hãng VN/A Giá tốt, góp 0%",
+        "price": "37790000"
+    },
+    {
+        "product_id": 38214,
+        "product": "iPhone 16 Pro Max 256GB Chính Hãng (VN/A)",
+        "slug": "iphone-16-pro-max",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16-pro-max-256gb-cty-a57852",
+        "thumbnail": "https://didongviet.vn/files/products/2024/9/2/1/1727855468669_thumb_iphone_16_pro_didongviet.jpg",
+        "position": 1,
+        "page_title": "iPhone 16 Pro Max 256GB chính hãng VN/A Giá tốt, góp 0%",
+        "price": "30990000"
+    },
+    {
+        "product_id": 42044,
+        "product": "iPhone 16e 128GB Chính Hãng (VN/A)",
+        "slug": "iphone-16e-128gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-se-4-128gb-eb8f1d",
+        "thumbnail": "https://didongviet.vn/files/products/2025/1/20/1/1740019709014_iphone_16e_trang.png",
+        "position": 0,
+        "page_title": "iPhone 16e 128GB Chính Hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "16990000"
+    },
+    {
+        "product_id": 42101,
+        "product": "iPhone 16e 256GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16e-256gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16e-256gb-b419a7",
+        "thumbnail": "https://didongviet.vn/files/products/2025/1/20/1/1740019669587_iphone_16e.png",
+        "position": 0,
+        "page_title": "iPhone 16e 256GB Chính Hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "19990000"
+    },
+    {
+        "product_id": 42104,
+        "product": "iPhone 16e 512GB Chính Hãng (VN/A)",
+        "slug": "apple-iphone-16e-512gb",
+        "url": "https://didongviet.vn/san-pham-chua-phan-loai/apple-iphone-16e-512gb-781352",
+        "thumbnail": "https://didongviet.vn/files/products/2025/1/20/1/1740019729035_iphone_16e_trang.png",
+        "position": 0,
+        "page_title": "iPhone 16e 512GB Chính Hãng (VN/A) | Giá tốt, Góp 0%",
+        "price": "25990000"
+    }
+]
