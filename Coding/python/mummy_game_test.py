@@ -216,122 +216,166 @@ class Mummy:
         self.run_pos = {"X": self.x, "Y": self.y}
         
         self.rect = self.surface.get_rect()
-        
+
     def animate(self):
         if self.option in SPRITES_OPTIONS:
             coords = SPRITES_OPTIONS[self.option]
             self.surface.blit(self.img, (20, 20), coords)
-            
+
     def draw(self):
         DISPLAY.blit(self.surface, (self.x, self.y))
-    
+
     def update_rect(self):
         self.rect.topleft = (self.x, self.y)
-        
-    
+
     def check_wall_collision(self, new_x, new_y):
-        # Kiểm tra va chạm với tất cả các bức tường
+        # Check for wall collision in all possible directions
         for wall in GameManager.wall_list:
             if wall.rect.colliderect(pygame.Rect(new_x, new_y, self.rect.width, self.rect.height)):
-                return True  # Nếu va chạm, trả về True
-        return False  # Nếu không va chạm, trả về False    
+                return True  # Collision detected
+        return False  # No collision
+
+    def try_move(self, direction):
+        old_x, old_y = self.x, self.y
         
+        if direction == "left":
+            self.x -= SPEED
+            self.img = MUMMY_LEFT_IMG
+        elif direction == "right":
+            self.x += SPEED
+            self.img = MUMMY_RIGHT_IMG
+        elif direction == "up":
+            self.y -= SPEED
+            self.img = MUMMY_UP_IMG
+        elif direction == "down":
+            self.y += SPEED
+            self.img = MUMMY_DOWN_IMG
+        
+        if self.check_wall_collision(self.x, self.y):
+            self.x, self.y = old_x, old_y
+            return False
+        return True
+
     def update(self, left, right, up, down):
-        if self.go < GO_DISTANCE:
+        if self.go < GO_DISTANCE * 2:  # Đảm bảo di chuyển 2 ô (200px)
             if self.time_count < SPEED:
                 self.option = 0
-            elif self.time_count < SPEED*2:
+            elif self.time_count < SPEED * 2:
                 self.option = 1
-            elif self.time_count < SPEED*3:
+            elif self.time_count < SPEED * 3:
                 self.option = 2
-            elif self.time_count < SPEED*4:
+            elif self.time_count < SPEED * 4:
                 self.option = 3
-            elif self.time_count < SPEED*5:
+            elif self.time_count < SPEED * 5:
                 self.option = 4
-            
-            if self.time_count > SPEED*5:
+
+            if self.time_count > SPEED * 5:
                 self.time_count = 0
-                
+
             if left or right or up or down:
                 self.surface.fill((0, 0, 0, 0))
                 self.time_count += 1
                 self.go += SPEED
+
+                # Thử các hướng di chuyển theo thứ tự ưu tiên
+                directions = []
+                if left: directions.append("left")
+                if right: directions.append("right")
+                if up: directions.append("up")
+                if down: directions.append("down")
                 
-                # Lưu trữ vị trí cũ của mummy
-                old_x, old_y = self.x, self.y
-            
-                if left:
-                    self.img = MUMMY_LEFT_IMG
-                    self.x -= SPEED
-                    
-                if right:
-                    self.img = MUMMY_RIGHT_IMG
-                    self.x += SPEED
-                    
-                if up:
-                    self.img = MUMMY_UP_IMG
-                    self.y -= SPEED
-                    
-                if down:
-                    self.img = MUMMY_DOWN_IMG
-                    self.y += SPEED
-                    
-                # Kiểm tra va chạm với tường
-                if self.check_wall_collision(self.x, self.y):
-                    # Nếu có va chạm, quay lại vị trí cũ
-                    self.x, self.y = old_x, old_y    
-                    
-            self.animate()
+                # Thêm các hướng khác nếu cần
+                all_directions = ["left", "right", "up", "down"]
+                for direction in all_directions:
+                    if direction not in directions:
+                        directions.append(direction)
+                
+                # Thử từng hướng cho đến khi thành công
+                moved = False
+                for direction in directions:
+                    if self.try_move(direction):
+                        moved = True
+                        break
+                
+                self.animate()
         else:
             self.go = 0
             GameManager.mummy_move += 1
             
-            # kiểm tra xác ướp đã đi 2 lượt chưa
-            if GameManager.mummy_move == 3:
+            if GameManager.mummy_move >= 2:  # Giữ nguyên cơ chế 2 bước
                 GameManager.mummy_move = 0
                 GameManager.can_player_move = True
-        
-        
+
     def run(self, key_player, player_x, player_y):
-        
-        # Kiểm tra vị trí của nút tiếp theo để di chuyển mummy
-        
-        # Thay đổi theo chiều dọc
-        if self.y != self.run_pos["Y"]:
-            # TH1: đi lên
-            if self.y > self.run_pos["Y"]:
-                self.update(up=True, down=False, left=False, right=False)
-            else: # TH2: đi xuống
-                self.update(up=False, down=True, left=False, right=False)
-        elif self.x != self.run_pos["X"]:
-            # Thay đổi theo chiều ngang
-            if self.x > self.run_pos["X"]: # TH3: đi qua trái
-                self.update(up=False, down=False, left=True, right=False)
-            else: # TH4: đi qua phải
-                self.update(up=False, down=False, left=False, right=True)
-        else:
-            key_mummy = get_key(self.x, self.y)
+        if GameManager.mummy_move < 1:
+            return
             
-            # Kiểm tra mummy có đụng player chưa
-            if key_mummy == key_player:
-                GameManager.game_over = True
+        key_mummy = get_key(self.x, self.y)
+        
+        # Kiểm tra va chạm với player
+        if key_mummy == key_player:
+            GameManager.game_over = True
+            return
+            
+        # Nếu đã đến đích hoặc chưa có hướng đi
+        if (self.x == self.run_pos["X"] and self.y == self.run_pos["Y"]) or self.go == 0:
+            run_key = graph.find_next_step(key_mummy, key_player)
+            if run_key is not None:
+                new_pos = get_pos(run_key)
                 
-            else:    
-                # Kiểm tra logic tường
-                wall_key = 21
+                # Kiểm tra xem vị trí mới có hợp lệ không
+                temp_rect = pygame.Rect(new_pos["X"], new_pos["Y"], self.rect.width, self.rect.height)
+                valid_move = True
+                for wall in GameManager.wall_list:
+                    if wall.rect.colliderect(temp_rect):
+                        valid_move = False
+                        break
                 
-                # Đk1: mummy đang đứng bên phải cái tường, Đk2: # mummy đang đứng bên trái cái tường
-                if (key_mummy == wall_key and player_x < mummy.x) or (key_mummy == wall_key - 1 and player_x > mummy.x): 
-                    if player_y == mummy.y: # đang đứng ngang với mummy (có tường dọc che)
-                        GameManager.mummy_move = 0
-                        GameManager.can_player_move = True
-                    elif player_y < mummy.y:
-                        self.run_pos["Y"] -= GO_DISTANCE
-                    else:
-                        self.run_pos["Y"] += GO_DISTANCE
+                if valid_move:
+                    self.run_pos = new_pos
                 else:
-                    run_key = graph.find_next_step(key_mummy, key_player)
-                    self.run_pos = get_pos(run_key)
+                    # Nếu đường đi bị chặn, tìm đường khác
+                    self.find_alternative_path(key_mummy, key_player)
+        
+        # Xác định hướng di chuyển
+        dx = self.run_pos["X"] - self.x
+        dy = self.run_pos["Y"] - self.y
+        
+        move_left = move_right = move_up = move_down = False
+        
+        if abs(dx) > abs(dy):  # Ưu tiên di chuyển ngang
+            if dx > 0:
+                move_right = True
+            else:
+                move_left = True
+        else:  # Ưu tiên di chuyển dọc
+            if dy > 0:
+                move_down = True
+            else:
+                move_up = True
+        
+        self.update(move_left, move_right, move_up, move_down)
+
+    def find_alternative_path(self, current_key, target_key):
+        """Tìm đường đi thay thế khi đường chính bị chặn"""
+        neighbors = graph.adjacency_list.get(current_key, [])
+        for neighbor in neighbors:
+            neighbor_pos = get_pos(neighbor)
+            temp_rect = pygame.Rect(neighbor_pos["X"], neighbor_pos["Y"], self.rect.width, self.rect.height)
+            
+            # Kiểm tra va chạm với tường
+            valid = True
+            for wall in GameManager.wall_list:
+                if wall.rect.colliderect(temp_rect):
+                    valid = False
+                    break
+            
+            if valid:
+                self.run_pos = neighbor_pos
+                return
+        
+        # Nếu không tìm được đường nào hợp lệ, đứng yên
+        self.run_pos = {"X": self.x, "Y": self.y}
                     
 
 #? VÒNG LẶP GAME
@@ -347,10 +391,10 @@ win_surface = pygame.Surface((100, 100))
 
 wall_hori = Wall(27, BLUE , "horizontal")
 wall_verti = Wall(21, RED , "vertical")
-wall_verti2 = Wall(16, RED , "vertical")
+# wall_verti2 = Wall(16, RED , "vertical")
 
 # Đưa các tường vào danh sách wall_list
-GameManager.wall_list = [wall_hori, wall_verti, wall_verti2]
+GameManager.wall_list = [wall_hori, wall_verti]
 
 #? STATES
 player_up, player_down, player_left, player_right = False, False, False, False
@@ -399,7 +443,7 @@ while running:
     # DISPLAY.blit(wall_surface, (WALL_POS['X'], WALL_POS['Y']))
     wall_hori.draw("horizontal")
     wall_verti.draw("vertical")
-    wall_verti2.draw("vertical")
+    # wall_verti2.draw("vertical")
     
     # Setup ô chiến thắng
     win_surface.fill((0, 255, 0))
